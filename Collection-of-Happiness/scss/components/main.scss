@@ -1,0 +1,133 @@
+@use "../abstracts/mixins";
+
+body {
+    height: 75vh;
+}
+
+.collection {
+
+    &__main {
+        height: 100%;
+        width: 100%;
+        @include mixins.flexA;
+    }
+
+    &__sectionleft {
+        @include mixins.flexCenter;
+        width: 50%;
+        height: 100%;
+    }
+
+    &__sectionright {
+        @include mixins.flexCenter;
+        width: 50%;
+        height: 100%;
+    }
+
+    &__article {
+        @include mixins.flexCenter;
+        width: 160rem;
+    }
+
+    &__cards {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 45rem;
+
+
+    }
+
+    &__card {
+        width: 20rem;
+        height: 20rem;
+        background: green;
+        position: relative;
+        border-radius: 2rem;
+
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.50s;
+            color: rgb(3, 133, 145);
+            font-weight: 800;
+            cursor: pointer;
+        }
+    }
+
+
+    &__p--titel {
+        position: absolute;
+        bottom: 0.8rem;
+        left: 1.6rem;
+        color: white;
+
+        &:hover {
+            color: rgb(0, 0, 0);
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+
+    }
+
+    &__p--datum {
+        position: absolute;
+        top: 0.8rem;
+        right: 1.6rem;
+
+
+
+    }
+
+    &__figure {
+        position: relative;
+        width: 90%;
+        height: 20rem;
+        background: gray;
+        border-radius: 2rem;
+
+
+    }
+
+    &__episode {
+        width: 100%;
+    }
+
+    &__paragraph {
+        margin-top: 2rem;
+    }
+
+    &__audio {
+        background: none;
+        border: none;
+        background: black;
+        color: white;
+        width: 25rem;
+        height: 4rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-top: 8rem;
+        gap: 20rem;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.episode__preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
